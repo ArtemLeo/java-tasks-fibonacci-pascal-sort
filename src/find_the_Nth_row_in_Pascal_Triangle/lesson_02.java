@@ -1,0 +1,29 @@
+package find_the_Nth_row_in_Pascal_Triangle;
+
+import java.util.Scanner;
+
+public class lesson_02
+{
+    public static void main(String[] args)
+    {
+        int num;
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Enter the Row Size of Pascal Triangle: ");
+        int row = s.nextInt();
+
+        for(int i=0; i<row; i++)
+        {
+            for(int space=row; space>i; space--)
+                System.out.print(" ");
+            num=1;
+            for(int j=0; j<=i; j++)
+            {
+                System.out.print(num+ " ");
+                num = num*(i-j)/(j+1);
+            }
+            System.out.print("\n");
+        }
+    }
+}
+
